@@ -1,0 +1,1 @@
+# LaTeX-auto-compile
