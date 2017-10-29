@@ -1,0 +1,13 @@
+echo "LaTeX自動コンパイルスクリプト"
+
+if [ $# -ne 1 ]; then
+echo -e "\n\nエラー:\t引数がありません。\n\n使用例\n\ttexc ファイル名(拡張子なし)" 1>&2
+exit 1
+fi
+
+texFile="$1.tex"
+dviFile="$1.dvi"
+
+eval "platex $texFile" && eval "dvipdfmx $dviFile"
+
+exit 0
